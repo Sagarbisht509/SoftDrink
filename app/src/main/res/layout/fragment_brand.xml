@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.BrandFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <RadioGroup
+            android:id="@+id/brand_options"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RadioButton
+                android:id="@+id/coke"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Coke (Coca-Cola)" />
+
+            <RadioButton
+                android:id="@+id/fanta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fanta" />
+
+            <RadioButton
+                android:id="@+id/sprite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sprite" />
+
+            <RadioButton
+                android:id="@+id/mountainDew"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mountain Dew" />
+
+            <RadioButton
+                android:id="@+id/limca"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Limca" />
+        </RadioGroup>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="0dp"
+            android:layout_height="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/brand_options" />
+
+        <TextView
+            android:id="@+id/subtotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider"
+            tools:text="Subtotal $5.00" />
+
+        <Button
+            android:id="@+id/nextScreen"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Order"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/subtotal" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

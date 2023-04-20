@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/firstFragment">
+
+    <fragment
+        android:id="@+id/firstFragment"
+        android:name="com.example.colddrink.ui.FirstFragment"
+        android:label="Soft Drink"
+        tools:layout="@layout/fragment_first" >
+        <action
+            android:id="@+id/action_firstFragment_to_brandFragment"
+            app:destination="@id/brandFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/brandFragment"
+        android:name="com.example.colddrink.ui.BrandFragment"
+        android:label="Choose Brand"
+        tools:layout="@layout/fragment_brand" >
+        <action
+            android:id="@+id/action_brandFragment_to_pickupFragment"
+            app:destination="@id/pickupFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pickupFragment"
+        android:name="com.example.colddrink.ui.PickupFragment"
+        android:label="Choose Pickup day"
+        tools:layout="@layout/fragment_pickup" >
+        <action
+            android:id="@+id/action_pickupFragment_to_summaryFragment"
+            app:destination="@id/summaryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/summaryFragment"
+        android:name="com.example.colddrink.ui.SummaryFragment"
+        android:label="Order Summary"
+        tools:layout="@layout/fragment_summary" />
+</navigation>
