@@ -5,6 +5,7 @@
     tools:context=".ui.BrandFragment">
 
     <data>
+
         <variable
             name="viewModel"
             type="com.example.colddrink.SharedViewModel" />

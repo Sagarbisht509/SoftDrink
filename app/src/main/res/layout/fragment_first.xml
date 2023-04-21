@@ -8,25 +8,28 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:orientation="vertical"
-        android:padding="10dp">
+        android:padding="20dp">
 
         <Button
             android:id="@+id/btn_200ml"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="200 ml" />
+            android:layout_gravity="center"
+            android:text="@string/_200_ml" />
 
         <Button
             android:id="@+id/btn_500ml"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="500 ml" />
+            android:layout_gravity="center"
+            android:text="@string/_500_ml" />
 
         <Button
             android:id="@+id/btn_1l"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="1 l" />
+            android:layout_gravity="center"
+            android:text="@string/_1_l" />
 
     </LinearLayout>
 

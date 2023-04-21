@@ -1,10 +1,10 @@
 package com.example.colddrink.ui
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.colddrink.R
@@ -13,10 +13,10 @@ import com.example.colddrink.databinding.FragmentPickupBinding
 
 class PickupFragment : Fragment() {
 
-    private var _binding : FragmentPickupBinding?= null
+    private var _binding: FragmentPickupBinding? = null
     private val binding get() = _binding!!
 
-    private val sharedViewModel : SharedViewModel by activityViewModels()
+    private val sharedViewModel: SharedViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -30,6 +30,7 @@ class PickupFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.apply {
+            lifecycleOwner = viewLifecycleOwner
             viewModel = sharedViewModel
         }
 

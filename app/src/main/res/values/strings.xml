@@ -14,4 +14,7 @@
     <string name="total_price">Total %s</string>
     <string name="txt_brand">Brand</string>
     <string name="txt_pickup_date">pickup date</string>
+    <string name="_200_ml">200 ml</string>
+    <string name="_500_ml">500 ml</string>
+    <string name="_1_l">1 l</string>
 </resources>

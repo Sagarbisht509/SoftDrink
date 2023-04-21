@@ -31,17 +31,14 @@ class FirstFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.btn200ml.setOnClickListener {
-            sharedViewModel.updatePrice(20)
             setQuantityAndNavigate("200")
         }
 
         binding.btn500ml.setOnClickListener {
-            sharedViewModel.updatePrice(40)
             setQuantityAndNavigate("500")
         }
 
         binding.btn1l.setOnClickListener {
-            sharedViewModel.updatePrice(60)
             setQuantityAndNavigate("1000")
         }
     }

@@ -4,7 +4,6 @@
     tools:context=".ui.SummaryFragment">
 
     <data>
-
         <variable
             name="viewModel"
             type="com.example.colddrink.SharedViewModel" />

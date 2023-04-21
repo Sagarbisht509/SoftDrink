@@ -4,6 +4,7 @@
     tools:context=".ui.PickupFragment">
 
     <data>
+
         <variable
             name="viewModel"
             type="com.example.colddrink.SharedViewModel" />
@@ -25,7 +26,7 @@
                 android:id="@+id/option1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:checked="@{viewModel.brand.equals(viewModel.dateOptions[0])}"
+                android:checked="@{viewModel.date.equals(viewModel.dateOptions[0])}"
                 android:onClick="@{() -> viewModel.setDate(viewModel.dateOptions[0])}"
                 android:text="@{viewModel.dateOptions[0]}" />
 
@@ -33,32 +34,32 @@
                 android:id="@+id/option2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:checked="@{viewModel.brand.equals(viewModel.dateOptions[1])}"
-                android:onClick="@{() -> viewModel.setBrand(viewModel.dateOptions[1])}"
+                android:checked="@{viewModel.date.equals(viewModel.dateOptions[1])}"
+                android:onClick="@{() -> viewModel.setDate(viewModel.dateOptions[1])}"
                 android:text="@{viewModel.dateOptions[1]}" />
 
             <RadioButton
                 android:id="@+id/option3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:checked="@{viewModel.brand.equals(viewModel.dateOptions[2])}"
-                android:onClick="@{() -> viewModel.setBrand(viewModel.dateOptions[2])}"
+                android:checked="@{viewModel.date.equals(viewModel.dateOptions[2])}"
+                android:onClick="@{() -> viewModel.setDate(viewModel.dateOptions[2])}"
                 android:text="@{viewModel.dateOptions[2]}" />
 
             <RadioButton
                 android:id="@+id/option4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:checked="@{viewModel.brand.equals(viewModel.dateOptions[3])}"
-                android:onClick="@{() -> viewModel.setBrand(viewModel.dateOptions[3])}"
+                android:checked="@{viewModel.date.equals(viewModel.dateOptions[3])}"
+                android:onClick="@{() -> viewModel.setDate(viewModel.dateOptions[3])}"
                 android:text="@{viewModel.dateOptions[3]}" />
 
             <RadioButton
                 android:id="@+id/option5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:checked="@{viewModel.brand.equals(viewModel.dateOptions[4])}"
-                android:onClick="@{() -> viewModel.setBrand(viewModel.dateOptions[4])}"
+                android:checked="@{viewModel.date.equals(viewModel.dateOptions[4])}"
+                android:onClick="@{() -> viewModel.setDate(viewModel.dateOptions[4])}"
                 android:text="@{viewModel.dateOptions[4]}" />
         </RadioGroup>
 
@@ -72,8 +73,9 @@
 
         <Button
             android:id="@+id/nextScreen"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:text="@string/txt_next" />
 
     </LinearLayout>
