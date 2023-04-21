@@ -2,4 +2,16 @@
     <string name="app_name">ColdDrink</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="txt_limca">Limca</string>
+    <string name="txt_coke">Coke</string>
+    <string name="txt_fanta">Fanta</string>
+    <string name="txt_sprite">Sprite</string>
+    <string name="txt_mountain_dew">Mountain Dew</string>
+    <string name="txt_next">next</string>
+    <string name="quantity">quantity</string>
+    <string name="order">order</string>
+    <string name="subtotal_price">Subtotal %s</string>
+    <string name="total_price">Total %s</string>
+    <string name="txt_brand">Brand</string>
+    <string name="txt_pickup_date">pickup date</string>
 </resources>

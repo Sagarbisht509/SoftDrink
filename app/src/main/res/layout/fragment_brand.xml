@@ -4,6 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".ui.BrandFragment">
 
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.colddrink.SharedViewModel" />
+    </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -22,31 +28,41 @@
                 android:id="@+id/coke"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Coke (Coca-Cola)" />
+                android:checked="@{viewModel.brand.equals(@string/txt_coke)}"
+                android:onClick="@{() -> viewModel.setBrand(@string/txt_coke)}"
+                android:text="@string/txt_coke" />
 
             <RadioButton
                 android:id="@+id/fanta"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Fanta" />
+                android:checked="@{viewModel.brand.equals(@string/txt_fanta)}"
+                android:onClick="@{() -> viewModel.setBrand(@string/txt_fanta)}"
+                android:text="@string/txt_fanta" />
 
             <RadioButton
                 android:id="@+id/sprite"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Sprite" />
+                android:checked="@{viewModel.brand.equals(@string/txt_sprite)}"
+                android:onClick="@{() -> viewModel.setBrand(@string/txt_sprite)}"
+                android:text="@string/txt_sprite" />
 
             <RadioButton
                 android:id="@+id/mountainDew"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Mountain Dew" />
+                android:checked="@{viewModel.brand.equals(@string/txt_mountain_dew)}"
+                android:onClick="@{() -> viewModel.setBrand(@string/txt_mountain_dew)}"
+                android:text="@string/txt_mountain_dew" />
 
             <RadioButton
                 android:id="@+id/limca"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Limca" />
+                android:checked="@{viewModel.brand.equals(@string/txt_limca)}"
+                android:onClick="@{() -> viewModel.setBrand(@string/txt_limca)}"
+                android:text="@string/txt_limca" />
         </RadioGroup>
 
         <View
@@ -63,13 +79,13 @@
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/divider"
-            tools:text="Subtotal $5.00" />
+            tools:text="@{@string/subtotal_price(viewModel.price.toString())}" />
 
         <Button
             android:id="@+id/nextScreen"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Order"
+            android:text="@string/txt_next"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

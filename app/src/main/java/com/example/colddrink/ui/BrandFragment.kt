@@ -10,39 +10,39 @@ import androidx.navigation.fragment.findNavController
 import com.example.colddrink.R
 import com.example.colddrink.SharedViewModel
 import com.example.colddrink.databinding.FragmentBrandBinding
-import com.example.colddrink.databinding.FragmentSummaryBinding
 
 class BrandFragment : Fragment() {
 
-    private var _binding : FragmentBrandBinding?= null
-    //private val binding get() = _binding!!
-
+    private var binding : FragmentBrandBinding?= null
     private val sharedViewModel : SharedViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-      //  _binding = FragmentBrandBinding.inflate(inflater, container, false)
-       // return binding.root
+        val fragmentBinding = FragmentBrandBinding.inflate(inflater, container, false)
+        binding = fragmentBinding
 
-        val b = FragmentBrandBinding.inflate(inflater, container, false)
-        _binding = b
-
-        return b.root
-
+        return fragmentBinding.root
     }
 
-  /*  override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.nextScreen.setOnClickListener {
+        binding?.apply {
+            viewModel = sharedViewModel
+        }
+
+        binding?.nextScreen?.setOnClickListener {
+            if(sharedViewModel.isBrandSelected()) {
+                sharedViewModel.setBrand("Coke")
+            }
             findNavController().navigate(R.id.action_brandFragment_to_pickupFragment)
         }
     }
-*/
+
     override fun onDestroyView() {
         super.onDestroyView()
-        _binding = null
+        binding = null
     }
 }
